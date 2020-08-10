@@ -1,0 +1,52 @@
+<img src="assets\photo\ppr.jpg" style="width:100%" >
+<br><br>
+
+<div class="reste">
+<button routerLink="/specialite" type="button" class="btn btn-dark" style="color: rgb(235, 171, 10)" ><img src="assets\photo\asiatique.jpg"class="rounded float-left" width="100" height="100" alt=""><br>asiatique</button>
+<form action="/action_page.php">
+    <input type="text" placeholder="adresse.." name="search">
+    <button type="button" class="btn btn-dark" style="color: rgb(235, 171, 10)">rechercher</button>
+  </form>
+<button type="button" class="btn btn-dark" style="color: rgb(235, 171, 10)"><img src="assets\photo\coffee.jpg"class="rounded float-right" width="100" height="100" alt=""><br>coffee</button>
+</div><br>
+<div class="reste">
+<button type="button" class="btn btn-dark" style="color: rgb(235, 171, 10)"><img src="assets\photo\japan.jpg"class="rounded float-left" width="100" height="100" alt=""><br>japan</button>
+<button type="button" class="btn btn-dark" style="color: rgb(235, 171, 10)"><img src="assets\photo\laotien.jpg"class="rounded float-right" width="100" height="100" alt=""><br>laotien</button>
+<button type="button" class="btn btn-dark" style="color: rgb(235, 171, 10)"><img src="assets\photo\neobistrot.jpg"class="rounded float-left" width="100" height="100" alt=""><br>neobistrot</button>
+<button type="button" class="btn btn-dark" style="color: rgb(235, 171, 10)"><img src="assets\photo\pizzas.jpg"class="rounded float-right" width="100" height="100" alt=""><br>pizzas</button>
+</div>
+<div class="reste">
+<button type="button" class="btn btn-dark" style="color: rgb(235, 171, 10)"><img src="assets\photo\sudOuest.jpg"class="rounded float-left" width="100" height="100" alt=""><br>sudOuest</button>
+<button type="button" class="btn btn-dark" style="color: rgb(235, 171, 10)"><img src="assets\photo\terroir.jpg"class="rounded float-right" width="100" height="100" alt=""><br>terroir</button>
+</div>
+
+<BR><hr><BR>
+
+    <div class="resteu">
+       
+        <tr *ngFor="let restau of listRestau$ | async">
+            <div class="rest">
+            <td><img src="assets\photo\restaurent.jpg"class="rounded float-left" width="200" height="150" alt=""></td>
+              
+            <td ><b>Name : </b>{{restau.name}}</td>
+            <td><b>type : </b>{{restau.type}}</td>
+           
+            
+            <td *ngIf="check" ><b>CP : </b>{{restau.CP}}</td>
+            <td *ngIf="check"> <b>adresse : </b>{{restau.adresse}}</td>
+            <td *ngIf="check"><b>latitude : </b>{{restau.latitude}}</td>
+            <td *ngIf="check"><b>longitude : </b>{{restau.longitude}}</td>
+            <td *ngIf="check"><b>telephone : </b>{{restau.telephone}}</td>
+            <td *ngIf="check"><b>prix : </b>{{restau.prix}}</td>
+            <td  *ngIf="check" (click)="specialite(restau.specialite1)" style="cursor: pointer; color: darkgreen;"><b>sxpecialite1 : </b>{{restau.specialite1}}</td>
+            <td *ngIf="check"><b>specialite2 : </b>{{restau.specialite2}}</td>
+            <td *ngIf="check"><b>specialite3 : </b>{{restau.specialite3}}</td>
+            <button  type="button" class="btn btn-warning" (click)="myClick()" style="color: darkgreen">{{nameButton}}</button>
+        </div>
+            <br>
+            
+
+        </tr>
+    
+        </div>
+   

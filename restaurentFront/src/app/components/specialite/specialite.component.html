@@ -1,0 +1,30 @@
+
+<h1>Restaurant Asiatique</h1>
+<div class="resteu" >
+       
+    <tr *ngFor="let restau of listRestau ">
+        <div class="rest">
+        <td><img src="assets\photo\asiatique.jpg"class="rounded float-left" width="200" height="150" alt=""></td>
+          
+        <td ><b>Name : </b>{{restau.name}}</td>
+        <td><b>type : </b>{{restau.type}}</td>
+       
+        
+        <td *ngIf="check" ><b>CP : </b>{{restau.CP}}</td>
+        <td *ngIf="check"> <b>adresse : </b>{{restau.adresse}}</td>
+        <td *ngIf="check"><b>latitude : </b>{{restau.latitude}}</td>
+        <td *ngIf="check"><b>longitude : </b>{{restau.longitude}}</td>
+        <td *ngIf="check"><b>telephone : </b>{{restau.telephone}}</td>
+        <td *ngIf="check"><b>prix : </b>{{restau.prix}}</td>
+        <td *ngIf="check"><b>specialite1 : </b>{{restau.specialite1}}</td>
+        <td *ngIf="check"><b>specialite2 : </b>{{restau.specialite2}}</td>
+        <td *ngIf="check"><b>specialite3 : </b>{{restau.specialite3}}</td>
+        <button  type="button" class="btn btn-warning" (click)="myClick()" style="color: darkgreen" >{{nameButton}}</button>
+    </div>
+        <br>
+        
+
+    </tr>
+
+    </div>
+

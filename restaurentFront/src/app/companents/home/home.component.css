@@ -1,0 +1,23 @@
+.reste{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.resteu{
+    display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+   
+}
+.rest{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    }
+.rest b{
+    color: firebrick;
+
+ }
